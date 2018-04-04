@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+    <title>Mis Marcadores</title>
+    <style>
+        body {
+            background-color: #002B37;
+        }
+    </style>
+</head>
+
+<body onload="recuperarMarcadores();">
+    <div class="container">
+        <h3 class="mt-4 mb-4 text-white">Mis Marcadores</h3>
+        <div class="card text-white border-light bg-info mb-4">
+            <div class="card-header">
+                <h2 class="text-center">Guarda Tus Sitios Favoritos.</h2>
+            </div>
+            <div class="card-body">
+                <form id="formulario">
+                    <div class="form-group">
+                        <label class="lead">Nombre</label>
+                        <input type="text" class="form-control mb-3" placeholder="Nombre del Sitio" id="nombreSitio">
+                    </div>
+                    <div class="form-group">
+                        <label class="lead">URL</label>
+                        <input type="text" class="form-control mb-3" placeholder="URL del Sitio" id="urlSitio">
+                    </div>
+                    <p class="text-center">
+                        <input class="btn btn-lg btn-secondary mt-3" type="submit" value="Guardar">
+                    </p>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div id="respuesta table-responsive">
+            <div class="alert alert-info">
+                <table class="table table-info table-hover table-striped table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Visitar</th>
+                            <th scope="col">Borrar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="respuesta-filas">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-5">
+        <div class="container">
+            <span class="text-white">&copy; Jupiter Data 2017.</span>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
